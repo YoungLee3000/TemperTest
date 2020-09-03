@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="50dp"
+    android:textAlignment="center"
+    android:paddingTop="10dp"
+    android:layout_centerVertical="true"
+   >
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:text="姓名："
+        android:textSize="18sp"
+        android:layout_alignParentLeft="true"/>
+    <TextView
+        android:id="@+id/tv_contain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="李小璐"
+        android:textSize="18sp"
+        android:textColor="@color/colorAccent"
+        android:layout_toRightOf="@id/tv_title"/>
+
+</RelativeLayout>

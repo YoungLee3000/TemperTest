@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="InfoItemLayout">
+        <attr name="contain_back" format="color" />
+        <attr name="title_text" format="string" />
+        <attr name="title_color" format="color"/>
+        <attr name="title_size" format="dimension"/>
+        <attr name="contain_text" format="string" />
+        <attr name="contain_color" format="color"/>
+        <attr name="contain_size" format="color"/>
+        <attr name="info_visibility" format="integer"/>
+    </declare-styleable>
+</resources>

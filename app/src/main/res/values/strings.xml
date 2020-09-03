@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">体温监控</string>
+
+    <string name="title_name">姓名:</string>
+    <string name="title_certificate">身份证:</string>
+    <string name="title_temper">体温:</string>
+    <string name="title_time">时间:</string>
+    <string name="title_total">总计人数:</string>
+    <string name="title_normal">正常体温数:</string>
+    <string name="title_except">异常体温数:</string>
+
+
+    <string name="temper_tips">体温信息统计</string>
+    <string name="info_tips">个人身份信息</string>
+    <string name="program_tips">进行实小程序</string>
+
+    <!--界面标题-->
+    <string name="activity_title">新大陆体温数据平台</string>
+    <string name="camera_tips1">打开“进行实”小程序，在下方</string>
+    <string name="camera_tips2">15cm</string>
+    <string name="camera_tips3">左右展示网证码</string>
+    <string name="sensor_tips">请在10秒内将手指或手腕靠近红外传感器以检测体温</string>
+
+</resources>

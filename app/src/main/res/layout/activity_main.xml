@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@drawable/nq_bg2">
+
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_title"
+        android:textSize="24sp"
+        android:background="@color/colorNaviga"
+        android:textColor="@color/white"
+        android:textAlignment="center" />
+
+    <LinearLayout
+        android:id="@+id/ll_person_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@id/tv_title"
+        android:orientation="horizontal"
+       >
+
+
+        <RelativeLayout
+            android:id="@+id/ll_person_left"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:layout_marginRight="10dp"
+            android:layout_weight="3">
+
+            <TextView
+                android:id="@+id/tv_info_tips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/info_tips"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="24sp"
+                android:textColor="@color/cron"
+                android:textAlignment="center"
+                android:layout_alignParentTop="true"/>
+
+            <com.nlscan.android.tempertest.InfoItemLayout
+                android:id="@+id/iil_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title_text="@string/title_name"
+                android:layout_marginTop="10dp"
+                app:contain_text="sdfsdf"
+                app:contain_color="@color/black"
+                app:contain_back="@color/yellow"
+                app:title_color="@color/blue"
+                android:layout_below="@id/tv_info_tips"/>
+
+            <com.nlscan.android.tempertest.InfoItemLayout
+                android:id="@+id/iil_certificate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title_text="@string/title_certificate"
+                app:title_color="@color/blue"
+                app:contain_color="@color/black"
+                app:contain_back="@color/yellow"
+                android:layout_below="@id/iil_name"/>
+
+            <com.nlscan.android.tempertest.InfoItemLayout
+                android:id="@+id/iil_temper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title_text="@string/title_temper"
+                app:title_color="@color/blue"
+                app:contain_back="@color/yellow"
+                android:layout_below="@id/iil_certificate"/>
+
+
+            <com.nlscan.android.tempertest.InfoItemLayout
+                android:id="@+id/iil_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title_text="@string/title_time"
+                app:title_color="@color/blue"
+                app:contain_color="@color/black"
+                app:contain_back="@color/yellow"
+                android:layout_below="@id/iil_temper"/>
+
+
+            <ImageView
+                android:id="@+id/img_program"
+                android:visibility="invisible"
+                android:layout_marginBottom="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/small_process"
+                android:layout_below="@id/tv_info_tips"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="7"
+            android:layout_height="300dp">
+
+            <include
+                android:id="@+id/ic_header"
+                layout="@layout/text_item"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_person_list"
+                android:layout_below="@id/ic_header"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"/>
+
+            <View
+                android:id="@+id/v_line_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/rv_person_list"/>
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_temper_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/ll_person_info">
+
+
+        <LinearLayout
+            android:id="@+id/ll_temper_left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_temper_tips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/temper_tips"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="24sp"
+                android:textColor="@color/cron"
+                android:textAlignment="center" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <com.nlscan.android.tempertest.InfoItemLayout
+                    android:id="@+id/iil_total"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    app:title_text="@string/title_total"
+                    app:title_color="@color/black"/>
+
+                <com.nlscan.android.tempertest.InfoItemLayout
+                    android:id="@+id/iil_normal"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    app:title_text="@string/title_normal"
+                    app:title_color="@color/black"/>
+
+                <com.nlscan.android.tempertest.InfoItemLayout
+                    android:id="@+id/iil_except"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    app:title_text="@string/title_except"
+                    app:title_color="@color/black"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_camera_notice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:id="@+id/img_arrow_down"
+            android:src="@drawable/arrow_down"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+        <TextView
+            android:id="@+id/tv_camera_tips1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/camera_tips1"
+            android:textColor="@color/blue"
+            android:textSize="25sp"/>
+        <TextView
+            android:id="@+id/tv_camera_tips2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/camera_tips2"
+            android:textColor="@color/red"
+            android:textSize="35sp"/>
+        <TextView
+            android:id="@+id/tv_camera_tips3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/camera_tips3"
+            android:textColor="@color/blue"
+            android:textSize="25sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_sensor_notice"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp">
+
+        <ImageView
+            android:id="@+id/img_arrow_right"
+            android:src="@drawable/arrow_right"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+        <TextView
+            android:id="@+id/tv_sensor_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sensor_tips"
+            android:textColor="@color/blue"
+            android:textSize="25sp"/>
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>
