@@ -319,6 +319,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private void queryNameInfo(String queryCode){
         final String para = queryCode;
+        Log.d(Constants.TAG,"queryCode is " + queryCode);
         showLoadingWindow("获取数据中");
 
         new Thread()
@@ -336,6 +337,7 @@ public class MainActivity extends AppCompatActivity {
                 String response = PostUtil.sendPost(
                         dataUrl,map,"utf-8",mIfJson);
                 Log.d(Constants.TAG,response);
+                Log.d(Constants.TAG,"response is " + response);
 
                 String resultStr = PostUtil.parseJsonStr(response,"result",false);
                 String personInfo = PostUtil.parseJsonStr(response,Constants.FIELD_INFO,true);
